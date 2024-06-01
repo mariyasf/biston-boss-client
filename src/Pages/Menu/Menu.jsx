@@ -1,7 +1,6 @@
 
 import { Helmet } from 'react-helmet-async';
 import Cover from '../Shared/Cover';
-import PopularMenu from '../Home/PopularMenu/PopularMenu';
 import useMenu from '../../Hooks/useMenu';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import MenuCategory from './MenuCategory';
@@ -26,11 +25,13 @@ const Menu = () => {
     const offered = menu.filter(item =>
         item.category === 'offered'
     )
+
     return (
         <div>
             <Helmet>
                 <title>Bistro Boos | Menu</title>
             </Helmet>
+            
             <Cover
                 bgUrl={"/menu/banner3.jpg"}
                 title={"Our Menu"}
@@ -45,12 +46,12 @@ const Menu = () => {
             <MenuCategory
                 menu={dessert}
                 bgUrl={'/public/menu/dessert-bg.jpeg'}
-                title={"Dessert"}
+                title={"dessert"}
             />
             <MenuCategory
                 menu={pizza}
                 bgUrl={'/public/menu/pizza-bg.jpg'}
-                title={"Pizza"}
+                title={"pizza"}
             />
             <MenuCategory
                 menu={soup}

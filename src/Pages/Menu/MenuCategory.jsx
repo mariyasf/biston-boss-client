@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Cover from "../Shared/Cover";
 import MenuItemCard from "../Shared/MenuItemCard";
 
@@ -14,6 +15,7 @@ const MenuCategory = ({ menu, bgUrl, title }) => {
 
                 />
             }
+
             <div className='pt-10 grid md:grid-cols-2 gap-10'>
                 {
                     menu.map(item =>
@@ -24,6 +26,12 @@ const MenuCategory = ({ menu, bgUrl, title }) => {
                     )
                 }
             </div>
+            
+            <Link to={`/order/${title}`}  >
+                <button className='btn btn-outline bg-[#D99904] border-b-4 
+            mt-4 text-white'>Order Now</button>
+
+            </Link>
         </div>
     );
 };
